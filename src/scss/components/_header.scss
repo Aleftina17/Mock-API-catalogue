@@ -1,0 +1,56 @@
+.header {
+	font-size: 1.4rem;
+
+	.container {
+		display: flex;
+		align-items: center;
+		padding: 3.8rem 0 4rem;
+	}
+
+	&_logo {
+		width: 13.1rem;
+		height: 2.6rem;
+		margin-right: 17.2rem;
+
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&_nav {
+		display: flex;
+		gap: 2.4rem;
+		margin-right: 52.4rem;
+
+		a {
+			text-transform: uppercase;
+		}
+	}
+
+	&_contact {
+		display: flex;
+		flex-direction: column;
+		gap: 0.2rem;
+
+		a {
+			font-size: 1.6rem;
+			font-weight: 500;
+
+			&:last-of-type {
+				opacity: 0.3;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&_widgets {
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+		gap: 2.4rem;
+	}
+}

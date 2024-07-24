@@ -1,0 +1,21 @@
+.catalogue{
+    background-image: url('./../../assets/images/pages/catalog/catalog-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 56rem;
+
+    .container{
+        position: relative;
+        padding: 3.2rem 0 3.9rem;
+
+        .breadcrumbs{
+            position: absolute;
+            top: 3.2rem;
+            left: 0;
+        }
+    }
+
+	&_top{
+
+    }
+}
