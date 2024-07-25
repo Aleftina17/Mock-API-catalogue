@@ -3,11 +3,12 @@
 	align-items: center;
 	gap: 1.9rem;
 	color: #fff;
-	opacity: 0.3;
 
 	a {
 		position: relative;
 		text-transform: uppercase;
+		opacity: 0.3;
+		z-index: 10;
 
 		&::after {
 			position: absolute;

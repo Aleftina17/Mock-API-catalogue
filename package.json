@@ -52,7 +52,7 @@
 		"jsdom": "^22.1.0",
 		"nouislider": "^15.7.1",
 		"slick-carousel": "^1.8.1",
-		"swiper": "^11.0.5",
+		"swiper": "^11.1.7",
 		"ymaps": "^0.2.1"
 	}
 }

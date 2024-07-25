@@ -1,0 +1,70 @@
+.catalogue-card {
+	display: block;
+	width: 27.8rem;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	gap: 1.6rem;
+	padding-bottom: 1.4rem;
+	border-bottom: 0.1rem solid rgba(#000000, 0.1);
+
+	&:hover {
+		opacity: 1;
+		.catalogue-card_img {
+			.img-front {
+				opacity: 0;
+			}
+			.img-back {
+				opacity: 1;
+			}
+		}
+	}
+
+	&_img {
+		width: 100%;
+		height: 27.8rem;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+
+		.img-back {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			inset: 1;
+			opacity: 0;
+			transition: opacity 0.3s;
+		}
+
+		.img-front {
+			width: 20rem;
+			height: 20rem;
+			transition: opacity 0.3s;
+		}
+	}
+
+	&_info {
+		display: flex;
+		flex-direction: column;
+		gap: 2.4rem;
+		font-size: 1.6rem;
+
+		&__bottom {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	&_title {
+		line-height: 112%;
+		letter-spacing: 0.032rem;
+		font-weight: 300;
+	}
+
+	&_price {
+		font-weight: 600;
+	}
+}

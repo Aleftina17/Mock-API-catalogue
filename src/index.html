@@ -8,33 +8,300 @@
 
 	<body>
 		<include src="./components/header.html"></include>
-			<section class="catalogue">
+		<section class="catalogue">
+			<div class="catalogue_top desktop">
 				<div class="container">
-					<div class="cataloue_top desktop">
-						<include src="./components/breadcrumbs.html"></include>
-						<div class="catalogue_swiper">
-							<div class="swiper-btn-prev">
-								<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M50 20L30 40L50 60" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					<include src="./components/breadcrumbs.html"></include>
+				</div>
+				<div class="catalogue_swiper swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<h2 class="swiper-slide__title">Краски</h2>
+							<span class="swiper-slide__desc">Идеально подходят для стен и других поверхностей. Найди свой идеальный цвет!</span>
+						</div>
+						<div class="swiper-slide">
+							<h2 class="swiper-slide__title">Краски 2</h2>
+							<span class="swiper-slide__desc">Идеально подходят для стен и других поверхностей. Найди свой идеальный цвет!</span>
+						</div>
+						<div class="swiper-slide">
+							<h2 class="swiper-slide__title">Краски 3</h2>
+							<span class="swiper-slide__desc">Идеально подходят для стен и других поверхностей. Найди свой идеальный цвет!</span>
+						</div>
+						<div class="swiper-slide">
+							<h2 class="swiper-slide__title">Краски 4</h2>
+							<span class="swiper-slide__desc">Идеально подходят для стен и других поверхностей. Найди свой идеальный цвет!</span>
+						</div>
+						<div class="swiper-slide">
+							<h2 class="swiper-slide__title">Краски 5</h2>
+							<span class="swiper-slide__desc">Идеально подходят для стен и других поверхностей. Найди свой идеальный цвет!</span>
+						</div>
+						<div class="swiper-slide">
+							<h2 class="swiper-slide__title">Краски 6</h2>
+							<span class="swiper-slide__desc">Идеально подходят для стен и других поверхностей. Найди свой идеальный цвет!</span>
+						</div>
+					</div>
+					<div class="swiper-button-next">
+						<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M30 60L50 40L30 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+
+			<div class="catalogue_main">
+				<div class="container">
+					<div class="catalogue_filter">
+						<div class="catalogue_filter__item">
+							<div class="toggle-switch-wrapper">
+								<input type="checkbox" id="toggle-new" checked />
+								<label class="toggle-switch" for="toggle-new"></label>
+							</div>
+							<span>Новинки</span>
+						</div>
+						<div class="catalogue_filter__item">
+							<div class="toggle-switch-wrapper">
+								<input type="checkbox" id="toggle-in-stock" />
+								<label class="toggle-switch" for="toggle-in-stock"></label>
+							</div>
+							<span>Есть в наличии</span>
+						</div>
+						<div class="catalogue_filter__item">
+							<div class="toggle-switch-wrapper">
+								<input type="checkbox" id="toggle-contract" />
+								<label class="toggle-switch" for="toggle-contract"></label>
+							</div>
+							<span>Контрактные</span>
+						</div>
+						<div class="catalogue_filter__item">
+							<div class="toggle-switch-wrapper">
+								<input type="checkbox" id="toggle-exclusive" />
+								<label class="toggle-switch" for="toggle-exclusive"></label>
+							</div>
+							<span>Эксклюзивные</span>
+						</div>
+						<div class="catalogue_filter__item">
+							<div class="toggle-switch-wrapper">
+								<input type="checkbox" id="toggle-sale" />
+								<label class="toggle-switch" for="toggle-sale"></label>
+							</div>
+							<span>Распродажа</span>
+						</div>
+					</div>
+					<div class="catalogue_list">
+						<div class="catalogue_list__top">
+							<span class="catalogue_list__amount">412 товаров</span>
+							<div class="catalogue_list__sort sort">
+								<div class="sort_top">
+									<span>Сначала дорогие</span>
+									<svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M5 7.5L8.4641 3L1.5359 3L5 7.5Z" fill="#202020" />
 									</svg>
-									
+								</div>
+								<ul class="sort_dropdown">
+									<li class="sort_dropdown__item active">Сначала дорогие</li>
+									<li class="sort_dropdown__item">Сначала недорогие</li>
+									<li class="sort_dropdown__item">Сначала популярные</li>
+									<li class="sort_dropdown__item">Сначала новые</li>
+								</ul>
 							</div>
-							<div class="swiper-wrapper">
-								<div class="swiper-slide"></div>
-							</div>
-							<div class="swiper-btn-next">
-								<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M30 60L50 40L30 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									
-							</div>
-							<div class="swiper-pagination">
-								
-							</div>
+						</div>
+						<div class="catalogue_list__grid">
+							<a href="#!" class="catalogue-card">
+								<div class="catalogue-card_img">
+									<img class="img-front" src="./assets/images/components/card-img-2.png" alt="card" />
+									<img class="img-back" src="./assets/images/components/card-img-1.png" alt="card-demo" />
+								</div>
+								<div class="catalogue-card_info">
+									<div class="catalogue-card_title">Краска Wallquest, Brownsone MS90102</div>
+									<div class="catalogue-card_info__bottom">
+										<div class="catalogue-card_price">6000 ₽</div>
+										<button class="btn btn_add">
+											<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10 4.16663V15.8333" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M4.16699 10H15.8337" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</button>
+									</div>
+								</div>
+							</a>
+
+							<a href="#!" class="catalogue-card">
+								<div class="catalogue-card_img">
+									<img class="img-front" src="./assets/images/components/card-img-3.png" alt="card" />
+									<img class="img-back" src="./assets/images/components/card-img-1.png" alt="card-demo" />
+								</div>
+								<div class="catalogue-card_info">
+									<div class="catalogue-card_title">Краска Wallquest, Brownsone MS90102</div>
+									<div class="catalogue-card_info__bottom">
+										<div class="catalogue-card_price">6000 ₽</div>
+										<button class="btn btn_add">
+											<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10 4.16663V15.8333" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M4.16699 10H15.8337" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</button>
+									</div>
+								</div>
+							</a>
+
+							<a href="#!" class="catalogue-card">
+								<div class="catalogue-card_img">
+									<img class="img-front" src="./assets/images/components/card-img-4.png" alt="card" />
+									<img class="img-back" src="./assets/images/components/card-img-1.png" alt="card-demo" />
+								</div>
+								<div class="catalogue-card_info">
+									<div class="catalogue-card_title">Краска Wallquest, Brownsone MS90102</div>
+									<div class="catalogue-card_info__bottom">
+										<div class="catalogue-card_price">6000 ₽</div>
+										<button class="btn btn_add">
+											<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10 4.16663V15.8333" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M4.16699 10H15.8337" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</button>
+									</div>
+								</div>
+							</a>
+
+							<a href="#!" class="catalogue-card">
+								<div class="catalogue-card_img">
+									<img class="img-front" src="./assets/images/components/card-img-5.png" alt="card" />
+									<img class="img-back" src="./assets/images/components/card-img-1.png" alt="card-demo" />
+								</div>
+								<div class="catalogue-card_info">
+									<div class="catalogue-card_title">Краска Wallquest, Brownsone MS90102</div>
+									<div class="catalogue-card_info__bottom">
+										<div class="catalogue-card_price">6000 ₽</div>
+										<button class="btn btn_add">
+											<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10 4.16663V15.8333" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M4.16699 10H15.8337" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</button>
+									</div>
+								</div>
+							</a>
+
+							<a href="#!" class="catalogue-card">
+								<div class="catalogue-card_img">
+									<img class="img-front" src="./assets/images/components/card-img-6.png" alt="card" />
+									<img class="img-back" src="./assets/images/components/card-img-1.png" alt="card-demo" />
+								</div>
+								<div class="catalogue-card_info">
+									<div class="catalogue-card_title">Краска Wallquest, Brownsone MS90102</div>
+									<div class="catalogue-card_info__bottom">
+										<div class="catalogue-card_price">6000 ₽</div>
+										<button class="btn btn_add">
+											<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10 4.16663V15.8333" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M4.16699 10H15.8337" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</button>
+									</div>
+								</div>
+							</a>
+
+							<a href="#!" class="catalogue-card">
+								<div class="catalogue-card_img">
+									<img class="img-front" src="./assets/images/components/card-img-2.png" alt="card" />
+									<img class="img-back" src="./assets/images/components/card-img-1.png" alt="card-demo" />
+								</div>
+								<div class="catalogue-card_info">
+									<div class="catalogue-card_title">Краска Wallquest, Brownsone MS90102</div>
+									<div class="catalogue-card_info__bottom">
+										<div class="catalogue-card_price">6000 ₽</div>
+										<button class="btn btn_add">
+											<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10 4.16663V15.8333" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M4.16699 10H15.8337" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</button>
+									</div>
+								</div>
+							</a>
+
+							<a href="#!" class="catalogue-card">
+								<div class="catalogue-card_img">
+									<img class="img-front" src="./assets/images/components/card-img-3.png" alt="card" />
+									<img class="img-back" src="./assets/images/components/card-img-1.png" alt="card-demo" />
+								</div>
+								<div class="catalogue-card_info">
+									<div class="catalogue-card_title">Краска Wallquest, Brownsone MS90102</div>
+									<div class="catalogue-card_info__bottom">
+										<div class="catalogue-card_price">6000 ₽</div>
+										<button class="btn btn_add">
+											<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10 4.16663V15.8333" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M4.16699 10H15.8337" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</button>
+									</div>
+								</div>
+							</a>
+
+							<a href="#!" class="catalogue-card">
+								<div class="catalogue-card_img">
+									<img class="img-front" src="./assets/images/components/card-img-4.png" alt="card" />
+									<img class="img-back" src="./assets/images/components/card-img-1.png" alt="card-demo" />
+								</div>
+								<div class="catalogue-card_info">
+									<div class="catalogue-card_title">Краска Wallquest, Brownsone MS90102</div>
+									<div class="catalogue-card_info__bottom">
+										<div class="catalogue-card_price">6000 ₽</div>
+										<button class="btn btn_add">
+											<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10 4.16663V15.8333" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M4.16699 10H15.8337" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</button>
+									</div>
+								</div>
+							</a>
+
+							<a href="#!" class="catalogue-card">
+								<div class="catalogue-card_img">
+									<img class="img-front" src="./assets/images/components/card-img-5.png" alt="card" />
+									<img class="img-back" src="./assets/images/components/card-img-1.png" alt="card-demo" />
+								</div>
+								<div class="catalogue-card_info">
+									<div class="catalogue-card_title">Краска Wallquest, Brownsone MS90102</div>
+									<div class="catalogue-card_info__bottom">
+										<div class="catalogue-card_price">6000 ₽</div>
+										<button class="btn btn_add">
+											<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10 4.16663V15.8333" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M4.16699 10H15.8337" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</button>
+									</div>
+								</div>
+							</a>
+
+							<a href="#!" class="catalogue-card">
+								<div class="catalogue-card_img">
+									<img class="img-front" src="./assets/images/components/card-img-6.png" alt="card" />
+									<img class="img-back" src="./assets/images/components/card-img-1.png" alt="card-demo" />
+								</div>
+								<div class="catalogue-card_info">
+									<div class="catalogue-card_title">Краска Wallquest, Brownsone MS90102</div>
+									<div class="catalogue-card_info__bottom">
+										<div class="catalogue-card_price">6000 ₽</div>
+										<button class="btn btn_add">
+											<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10 4.16663V15.8333" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M4.16699 10H15.8337" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</button>
+									</div>
+								</div>
+							</a>
 						</div>
 					</div>
 				</div>
-			</section>
-		<!-- <include src="./components/footer.html"></include> -->
+			</div>
+		</section>
+		 <include src="./components/cart.html"></include>
+		 <div class="overlay"></div>
 	</body>
 </html>

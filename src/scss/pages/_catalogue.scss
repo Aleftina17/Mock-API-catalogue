@@ -1,21 +1,139 @@
-.catalogue{
-    background-image: url('./../../assets/images/pages/catalog/catalog-bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 56rem;
+.catalogue {
+	&_top {
+		background-image: url('./../../assets/images/pages/catalog/catalog-bg.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 56rem;
+		margin-bottom: 7.2rem;
 
-    .container{
-        position: relative;
-        padding: 3.2rem 0 3.9rem;
+		.container {
+			position: relative;
+			padding: 0;
 
-        .breadcrumbs{
-            position: absolute;
-            top: 3.2rem;
-            left: 0;
-        }
-    }
+			.breadcrumbs {
+				position: absolute;
+				top: 3.2rem;
+				left: 0;
+			}
+		}
+	}
 
-	&_top{
+	&_swiper {
+		padding-top: 21.7rem;
+		padding-bottom: 3.9rem;
+		display: flex;
+		height: 56.1rem;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
 
-    }
+		.swiper-slide {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			gap: 2.4rem;
+			color: #fff;
+
+			&__title {
+				font-size: 7.2rem;
+				line-height: 88%;
+				text-align: center;
+				max-width: 140rem;
+			}
+
+			&__desc {
+				font-size: 1.6rem;
+				line-height: 130%;
+				font-weight: 500;
+				text-align: center;
+				width: 47.2rem;
+			}
+		}
+
+		.swiper-button-next {
+			&::after {
+				content: none;
+			}
+			width: 8rem;
+			height: 8rem;
+			z-index: 10;
+			top: 35.6rem;
+			right: 39rem;
+
+			svg {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		.swiper-pagination {
+			margin-top: auto;
+			position: static;
+			width: fit-content;
+			background-color: rgba(#000000, 0.4);
+			border-radius: 1.6rem;
+			padding: 1.3rem 2.4rem;
+			display: flex;
+			gap: 0.8rem;
+
+			.swiper-pagination-bullet {
+				margin: 0;
+				width: 0.6rem;
+				height: 0.6rem;
+				background-color: #fff;
+				opacity: 0.2;
+
+				&-active {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&_main {
+		.container {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	&_filter {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+
+		&__item {
+			display: flex;
+			gap: 1.2rem;
+			align-items: center;
+
+			span {
+				text-transform: uppercase;
+				font-size: 1.2rem;
+				letter-spacing: 0.072rem;
+			}
+		}
+	}
+
+	&_list {
+		display: flex;
+		flex-direction: column;
+		gap: 4.4rem;
+
+		&__top {
+			display: flex;
+			justify-content: space-between;
+			font-size: 1.2rem;
+			letter-spacing: 0.072rem;
+			font-weight: 500;
+			text-transform: uppercase;
+		}
+
+		&__grid {
+			width: fit-content;
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			gap: 3.3rem 2.4rem;
+		}
+	}
 }
