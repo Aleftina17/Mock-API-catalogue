@@ -81,6 +81,11 @@ a {
 		svg{
 			width: 1.6rem;
 			height: 1.6rem;
+
+			@media (max-width: 48em) {
+				width: 2rem;
+				height: 2rem;
+			}
 		}
 	}
 
@@ -133,6 +138,11 @@ a {
 		border-radius: 0.4rem;
 		transition: background-color 0.2s;
 
+		@media (max-width: 48em) {
+			font-size: 2.4rem;
+			border-radius: 0.8rem;
+		}
+
 		&:hover {
 			background-color: #93cdb0;
 		}
@@ -159,6 +169,12 @@ a {
 		transition: background-color 0.3s;
 		cursor: pointer;
 
+		@media (max-width: 48em) {
+			width: 7.2rem;
+			height: 4.4rem;
+			border-radius: 8rem;
+		}
+
 		&::after {
 			position: absolute;
 			top: 0.7rem;
@@ -169,6 +185,13 @@ a {
 			border-radius: 50%;
 			background-color: #1f2020;
 			transition: left 0.3s;
+
+			@media (max-width: 48em) {
+				width: 1.6rem;
+				height: 1.6rem;
+				top: 1.4rem;
+				left: 1.4rem;
+			}
 		}
 	}
 
@@ -179,6 +202,10 @@ a {
 
 			&::after {
 				left: 2.1rem;
+
+				@media (max-width: 48em) {
+					left: 4.4rem;
+				}
 			}
 		}
 	}
@@ -220,10 +247,19 @@ a {
 		background-color: #fff;
 		width: 28rem;
 
+		@media (max-width: 48em) {
+			width: 50rem;
+		}
+
 		&__item {
 			padding: 1.7rem 2.4rem;
 			transition: text-shadow 0.2s;
 			cursor: pointer;
+
+			@media (max-width: 48em) {
+				padding: 3.4rem 4.8rem;
+				font-size: 3.2rem;
+			}
 
 			&.active {
 				background-color: #7bb899;
@@ -264,6 +300,11 @@ a {
 		width: 3rem;
 		text-align: center;
 		font-size: 1.6rem;
+
+		@media (max-width: 48em) {
+			font-size: 2rem;
+			width: 4rem;
+		}
 	}
 }
 

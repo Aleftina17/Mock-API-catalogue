@@ -5,5 +5,6 @@ import '../scss/index.scss';
 import './components/overlay'
 import './components/cart'
 import './components/sort'
+import './components/filter'
 
 import './pages/catalogue';
