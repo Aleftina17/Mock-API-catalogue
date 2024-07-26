@@ -8,7 +8,7 @@ const filterBtn = document.querySelector('.btn_filter');
 const checkboxes = document.querySelectorAll('.catalogue_filter__item input[type="checkbox"]');
 
 let products = [];
-let filterCriteria = {};
+let filterOption = {};
 
 export function initializeFilter(initialProducts) {
 	products = initialProducts;
@@ -27,7 +27,7 @@ export function initializeFilter(initialProducts) {
 
 	checkboxes.forEach(checkbox => {
 		checkbox.addEventListener('change', () => {
-			filterCriteria[checkbox.id] = checkbox.checked;
+			filterOption[checkbox.id] = checkbox.checked;
 			applyFiltersAndSort();
 		});
 	});
@@ -38,23 +38,23 @@ export function initializeFilter(initialProducts) {
 export function applyFiltersAndSort() {
 	let filteredProducts = products;
 
-	if (filterCriteria['toggle-new']) {
+	if (filterOption['toggle-new']) {
 		filteredProducts = filteredProducts.sort((a, b) => new Date(b.addedDate) - new Date(a.addedDate)).slice(0, 6);
 	}
 
-	if (filterCriteria['toggle-in-stock']) {
+	if (filterOption['toggle-in-stock']) {
 		filteredProducts = filteredProducts.filter(product => product.amount > 0);
 	}
 
-	if (filterCriteria['toggle-contract']) {
+	if (filterOption['toggle-contract']) {
 		filteredProducts = filteredProducts.filter(product => product.isContract);
 	}
 
-	if (filterCriteria['toggle-exclusive']) {
+	if (filterOption['toggle-exclusive']) {
 		filteredProducts = filteredProducts.filter(product => product.isExclusive);
 	}
 
-	if (filterCriteria['toggle-sale']) {
+	if (filterOption['toggle-sale']) {
 		filteredProducts = filteredProducts.filter(product => product.isOnSale);
 	}
 

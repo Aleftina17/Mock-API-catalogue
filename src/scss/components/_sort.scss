@@ -11,7 +11,7 @@
 		cursor: pointer;
 		letter-spacing: 0.072rem;
 
-		span{
+		span {
 			width: fit-content;
 		}
 
@@ -26,7 +26,7 @@
 			text-transform: uppercase;
 			gap: 0.8rem;
 
-			svg{
+			svg {
 				width: 2rem;
 				height: 2rem;
 			}
@@ -34,9 +34,15 @@
 	}
 
 	&_dropdown {
-		display: none;
 		background-color: #fff;
 		width: 28rem;
+		position: absolute;
+		top: 0;
+		right: 0;
+		visibility: hidden;
+		opacity: 0;
+		transition: opacity 0.2s, visibility 0.2s, transform 0.3s;
+		transform: translateY(-20%);
 
 		@media (max-width: 48em) {
 			width: 50rem;
@@ -56,7 +62,7 @@
 				background-color: #7bb899;
 			}
 
-			&:hover{
+			&:hover {
 				text-shadow: 0 0 0 #000000;
 			}
 		}
@@ -64,10 +70,9 @@
 
 	&.open {
 		.sort_dropdown {
-			display: block;
-			position: absolute;
-			top: 0;
-			right: 0;
+			visibility: visible;
+			opacity: 1;
+			transform: translateY(0);
 		}
 	}
 }

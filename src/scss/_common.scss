@@ -62,23 +62,24 @@ a {
 		}
 
 		@media (max-width: 48em) {
-			background-color: #F2F2F2;
+			background-color: #f2f2f2;
 			padding: 0.8rem 2.4rem;
 			border-radius: 1.2rem;
 
-			svg{
+			svg {
 				width: 3.2rem;
 				height: 3.2rem;
 			}
 		}
 	}
 
-	&_plus, &_minus{
-		background-color: #F2F2F2;
+	&_plus,
+	&_minus {
+		background-color: #f2f2f2;
 		border-radius: 0.4rem;
 		padding: 0.4rem 1.2rem;
 
-		svg{
+		svg {
 			width: 1.6rem;
 			height: 1.6rem;
 
@@ -89,21 +90,21 @@ a {
 		}
 	}
 
-	&_remove{
-		transition: opacity .2s;
+	&_remove {
+		transition: opacity 0.2s;
 		opacity: 0.2;
 
-		&:hover{
+		&:hover {
 			opacity: 1;
 		}
-		
-		svg{
+
+		svg {
 			width: 2.4rem;
 			height: 2.4rem;
 		}
 	}
 
-	&_close{
+	&_close {
 		border-radius: 50%;
 		width: 4.8rem;
 		height: 4.8rem;
@@ -112,23 +113,23 @@ a {
 		align-items: center;
 		justify-content: center;
 
-		svg{
+		svg {
 			width: 2.4rem;
 			height: 2.4rem;
 		}
 	}
 
-	&_clear{
+	&_clear {
 		font-weight: 300;
 		opacity: 0.4;
-		transition: opacity .2s;
+		transition: opacity 0.2s;
 
-		&:hover{
+		&:hover {
 			opacity: 1;
 		}
 	}
 
-	&_order{
+	&_order {
 		padding: 2rem 5.8rem;
 		background-color: #7bb899;
 		text-transform: uppercase;
@@ -148,7 +149,7 @@ a {
 		}
 	}
 
-	&_filter{
+	&_filter {
 		@media (max-width: 48em) {
 			font-size: 2.4rem;
 			font-weight: 500;
@@ -211,22 +212,32 @@ a {
 	}
 }
 
-.overlay.active {
+.overlay {
 	width: 100%;
 	height: 100%;
-	background-color: rgba(#000000, 0.7);
+	background-color: rgba(0, 0, 0, 0.7);
 	position: fixed;
 	inset: 0;
+	opacity: 0;
+	visibility: hidden;
 	z-index: 11;
+	transition: opacity 0.2s, visibility 0.2s;
+	pointer-events: none;
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: all;
+	}
 }
 
-.input-number{
+.input-number {
 	display: flex;
 	gap: 2rem;
 	align-items: center;
 	position: relative;
 
-	input{
+	input {
 		width: 3rem;
 		text-align: center;
 		font-size: 1.6rem;
