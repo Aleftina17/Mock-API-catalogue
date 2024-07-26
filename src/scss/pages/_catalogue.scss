@@ -1,4 +1,5 @@
 .catalogue {
+
 	&_top {
 		background-image: url('./../../assets/images/pages/catalog/catalog-bg.png');
 		background-repeat: no-repeat;
@@ -108,15 +109,16 @@
 	&_main {
 		.container {
 			display: flex;
-			justify-content: space-between;
+			gap: 13.8rem;
 
 			@media (max-width: 48em) {
 				flex-direction: column;
+				gap: unset;
 			}
 		}
 	}
 
-	&_title{
+	&_title {
 		@media (max-width: 48em) {
 			font-size: 7.2rem;
 			line-height: 88%;
@@ -165,7 +167,7 @@
 
 			display: none;
 
-			&::after{
+			&::after {
 				position: absolute;
 				content: '';
 				top: 2.4rem;
@@ -174,11 +176,11 @@
 				width: 5.6rem;
 				height: 0.8rem;
 				border-radius: 8rem;
-				background-color: rgba(#1F2020,0.6);
+				background-color: rgba(#1f2020, 0.6);
 			}
 		}
 
-		&.open{
+		&.open {
 			@media (max-width: 48em) {
 				display: flex;
 			}
@@ -189,6 +191,9 @@
 		display: flex;
 		flex-direction: column;
 		gap: 4.4rem;
+		text-transform: uppercase;
+		font-size: 1.2rem;
+		flex: 1;
 
 		&__top {
 			display: flex;
@@ -200,6 +205,14 @@
 			display: grid;
 			grid-template-columns: repeat(5, 1fr);
 			gap: 3.3rem 2.4rem;
+
+			&.empty{
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 2.4rem;
+			}
 
 			@media (max-width: 48em) {
 				grid-template-columns: repeat(2, 1fr);

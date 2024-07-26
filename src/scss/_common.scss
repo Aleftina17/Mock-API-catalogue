@@ -214,6 +214,7 @@ a {
 .sort {
 	z-index: 12;
 	position: relative;
+	font-size: 1.2rem;
 
 	&_top {
 		display: flex;
@@ -221,8 +222,11 @@ a {
 		gap: 0.4rem;
 		font-weight: 500;
 		cursor: pointer;
-		font-size: 1.2rem;
 		letter-spacing: 0.072rem;
+
+		span{
+			width: fit-content;
+		}
 
 		svg {
 			width: 1rem;
