@@ -46,9 +46,6 @@ if (fs.existsSync(videoSourcePath)) {
     `Warning: Directory ${videoSourcePath} does not exist. Videos will not be copied.`
   );
 }
-//рабочий
-// const INCLUDE_PATTERN =
-//   /<include\s+src=["'](\.\/)?([^"']+)["']\s+data-text='([^']+)'\s*><\/include>/g;
 
 const INCLUDE_PATTERN =
   /<include\s+src=["'](\.\/)?([^"']+)["'](?:\s+data-text='([^']+)')?\s*><\/include>/g;
