@@ -11,15 +11,19 @@ import './pages/catalogue';
 
 import { fetchProducts } from './api';
 import { initializeSort } from './components/sort';
-import { initializeFilter, updateProducts } from './components/filter';
+import { initializeFilter } from './components/filter';
 import { renderProducts } from './render'; 
+import { updateCart } from './components/cart';
+
+window.products = [];
 
 (async function init() {
     try {
-        const products = await fetchProducts();
-        initializeSort();
-        initializeFilter(products);
-        updateProducts(products);
+        window.products = await fetchProducts();
+        initializeSort(window.products);
+        initializeFilter(window.products);
+        renderProducts(window.products);
+        updateCart();
     } catch (error) {
         console.error('Initialization error:', error);
         renderProducts([]);

@@ -1,18 +1,18 @@
 const catalogueListGrid = document.querySelector('.catalogue_list__grid');
 
 export function renderProducts(products) {
-	catalogueListGrid.innerHTML = '';
+    catalogueListGrid.innerHTML = '';
 
-	if (products.length === 0) {
-		catalogueListGrid.classList.add('empty');
-		catalogueListGrid.innerHTML = '<span>Товары не найдены</span>';
-	} else {
-		catalogueListGrid.classList.remove('empty');
-		products.forEach(product => {
-			const productCard = document.createElement('a');
-			productCard.href = '#!';
-			productCard.classList.add('catalogue-card');
-			productCard.innerHTML = `
+    if (products.length === 0) {
+        catalogueListGrid.classList.add('empty');
+        catalogueListGrid.innerHTML = '<span>Товары не найдены</span>';
+    } else {
+        catalogueListGrid.classList.remove('empty');
+        products.forEach(product => {
+            const productCard = document.createElement('a');
+            productCard.href = '#!';
+            productCard.classList.add('catalogue-card');
+            productCard.innerHTML = `
                 <div class="catalogue-card_img">
                     <img class="img-front" src="${product.images.front}" alt="${product.title}" />
                     <img class="img-back" src="${product.images.back}" alt="${product.title}-demo" />
@@ -30,7 +30,7 @@ export function renderProducts(products) {
                     </div>
                 </div>
             `;
-			catalogueListGrid.appendChild(productCard);
-		});
-	}
+            catalogueListGrid.appendChild(productCard);
+        });
+    }
 }
