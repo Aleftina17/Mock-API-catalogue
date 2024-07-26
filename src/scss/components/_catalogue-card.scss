@@ -8,8 +8,26 @@
 	padding-bottom: 1.4rem;
 	border-bottom: 0.1rem solid rgba(#000000, 0.1);
 
+	@media (max-width: 48em) {
+		width: 100%;
+		gap: 3.2rem;
+		padding-bottom: 6.8rem;
+	}
+
+	.btn_add {
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.3s;
+
+		@media (max-width: 48em) {
+			opacity: 1;
+			pointer-events: all;
+		}
+	}
+
 	&:hover {
 		opacity: 1;
+
 		.catalogue-card_img {
 			.img-front {
 				opacity: 0;
@@ -17,6 +35,11 @@
 			.img-back {
 				opacity: 1;
 			}
+		}
+
+		.btn_add {
+			opacity: 1;
+			pointer-events: all;
 		}
 	}
 
@@ -28,6 +51,10 @@
 		align-items: center;
 		justify-content: center;
 		position: relative;
+
+		@media (max-width: 48em) {
+			height: 31.2rem;
+		}
 
 		.img-back {
 			position: absolute;
@@ -42,6 +69,11 @@
 			width: 20rem;
 			height: 20rem;
 			transition: opacity 0.3s;
+
+			@media (max-width: 48em) {
+				width: 22.446rem;
+				height: 22.446rem;
+			}
 		}
 	}
 
@@ -50,6 +82,11 @@
 		flex-direction: column;
 		gap: 2.4rem;
 		font-size: 1.6rem;
+
+		@media (max-width: 48em) {
+			gap: 4rem;
+			font-size: 3.2rem;
+		}
 
 		&__bottom {
 			display: flex;
@@ -62,6 +99,10 @@
 		line-height: 112%;
 		letter-spacing: 0.032rem;
 		font-weight: 300;
+
+		@media (max-width: 48em) {
+			letter-spacing: 0.064rem;
+		}
 	}
 
 	&_price {

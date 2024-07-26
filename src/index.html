@@ -9,11 +9,11 @@
 	<body>
 		<include src="./components/header.html"></include>
 		<section class="catalogue">
-			<div class="catalogue_top desktop">
+			<div class="catalogue_top">
 				<div class="container">
 					<include src="./components/breadcrumbs.html"></include>
 				</div>
-				<div class="catalogue_swiper swiper">
+				<div class="catalogue_swiper swiper desktop">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<h2 class="swiper-slide__title">Краски</h2>
@@ -51,6 +51,7 @@
 
 			<div class="catalogue_main">
 				<div class="container">
+					<div class="catalogue_title mobile">Краски</div>
 					<div class="catalogue_filter">
 						<div class="catalogue_filter__item">
 							<div class="toggle-switch-wrapper">
@@ -90,7 +91,8 @@
 					</div>
 					<div class="catalogue_list">
 						<div class="catalogue_list__top">
-							<span class="catalogue_list__amount">412 товаров</span>
+							<span class="catalogue_list__amount desktop">412 товаров</span>
+							<button class="btn_filter mobile">Фильтры</button>
 							<div class="catalogue_list__sort sort">
 								<div class="sort_top">
 									<span>Сначала дорогие</span>

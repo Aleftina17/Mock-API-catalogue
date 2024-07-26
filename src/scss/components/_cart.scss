@@ -1,18 +1,19 @@
 .cart {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	bottom: 0;
-	right: -100%;
+	right: 0;
 	height: 100%;
 	background-color: #fff;
 	display: flex;
 	flex-direction: column;
-	transition: right 0.3s;
+	transition: transform 0.3s;
 	padding: 4rem;
 	z-index: 101;
+	transform: translateX(100%);
 
 	&.open {
-		right: 0;
+		transform: translateX(0);
 	}
 
 	.btn_close {
@@ -44,6 +45,9 @@
 		display: flex;
 		flex-direction: column;
 		gap: 2.5rem;
+		overflow: auto;
+		padding-right: 2rem;
+		margin-right: -2rem;
 	}
 
 	&_item {
